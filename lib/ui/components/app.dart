@@ -27,7 +27,16 @@ class App extends StatelessWidget {
     const primaryColorDark = Color.fromRGBO(96, 0, 39, 1);
     const primaryColorLight = Color.fromRGBO(188, 71, 123, 1);
     return MaterialApp(
-      title: 'App',git remote add origin https://github.com/frnklm/CleanCodeFlutter.git
+      title: 'App',
+      debugShowCheckedModeBanner: false,
+      theme: ThemeData(
+        primaryColor: primaryColor,
+        primaryColorDark: primaryColorDark,
+        primaryColorLight: primaryColorLight,
+        colorScheme: ColorScheme.fromSwatch(
+          primarySwatch: colorCustom,
+        ).copyWith(
+          secondary: primaryColor,
         ),
         textTheme: const TextTheme(
           headline1: TextStyle(
@@ -59,7 +68,7 @@ class App extends StatelessWidget {
         ),
         backgroundColor: Colors.white,
       ),
-      home: const LoginScreen(),
+      // home: const LoginScreen(),
     );
   }
 }

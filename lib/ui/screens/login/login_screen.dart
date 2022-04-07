@@ -4,10 +4,10 @@ import '../../components/component.dart';
 import 'login_presenter.dart';
 
 class LoginScreen extends StatelessWidget {
-  // final LoginPresenter presenter;
+  final LoginPresenter presenter;
 
-  const LoginScreen({Key? key}) : super(key: key);
-  // const LoginScreen(this.presenter, {Key? key}) : super(key: key);
+  // const LoginScreen({Key? key}) : super(key: key);
+  const LoginScreen(this.presenter, {Key? key}) : super(key: key);
 
   @override
   Widget build(BuildContext context) {
@@ -36,7 +36,7 @@ class LoginScreen extends StatelessWidget {
                         ),
                       ),
                       keyboardType: TextInputType.emailAddress,
-                      // onChanged: presenter.validateEmail,
+                      onChanged: presenter.validateEmail,
                     ),
                     Padding(
                       padding: const EdgeInsets.only(top: 8, bottom: 32),
@@ -49,7 +49,7 @@ class LoginScreen extends StatelessWidget {
                           ),
                         ),
                         obscureText: true,
-                        // onChanged: presenter.validatePassword,
+                        onChanged: presenter.validatePassword,
                       ),
                     ),
                     ElevatedButton(
